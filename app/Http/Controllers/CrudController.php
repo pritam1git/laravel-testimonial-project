@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Crud;
+use App\Models\Review;
 use Illuminate\Support\Facades\Storage;
 
 class CrudController extends Controller
@@ -16,7 +17,7 @@ public function public()
 
 public function index()
 {
-    $testimonials = Crud::latest()->get();
+    $testimonials = Review::latest()->get();
     return view('dashboard', compact('testimonials'));
 }
 public function store(Request $request)

@@ -101,6 +101,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">Ekansh Global</a>
             <div class="ms-auto">
+                <a href="{{ route('reviews') }}" class="btn btn-outline-success me-2">Reviews</a>
                 @auth
                 <a href="{{ url('/dashboard') }}" class="btn btn-outline-success me-2">Dashboard</a>
                 @else
